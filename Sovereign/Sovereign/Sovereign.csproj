@@ -46,6 +46,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -125,6 +128,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BUS\SovereignBus.cs" />
+    <Compile Include="Models\Generated\Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +149,22 @@
     <Content Include="Asset\img\HomePage\Slider3.png" />
     <Content Include="Asset\img\HomePage\Slider4.png" />
     <Content Include="Asset\img\HomePage\to_bottom.png" />
+    <Content Include="Asset\img\ImagesProduct\GoatFather01.png" />
+    <Content Include="Asset\img\ImagesProduct\GoatFather02.png" />
+    <Content Include="Asset\img\ImagesProduct\GoatFather03.png" />
+    <Content Include="Asset\img\ImagesProduct\GoatFather04.png" />
+    <Content Include="Asset\img\ImagesProduct\GoatFather05.png" />
+    <Content Include="Asset\img\ImagesProduct\GoatFather06.png" />
+    <Content Include="Asset\img\ImagesProduct\GoatFather07.png" />
+    <Content Include="Asset\img\ImagesProduct\GoatFather08.png" />
+    <Content Include="Asset\img\ImagesProduct\GOATNight01.png" />
+    <Content Include="Asset\img\ImagesProduct\GOATNight02.png" />
+    <Content Include="Asset\img\ImagesProduct\GOATNight03.png" />
+    <Content Include="Asset\img\ImagesProduct\GOATNight04.png" />
+    <Content Include="Asset\img\ImagesProduct\GOATNight05.png" />
+    <Content Include="Asset\img\ImagesProduct\GOATNight06.png" />
+    <Content Include="Asset\img\ImagesProduct\GOATNight07.png" />
+    <Content Include="Asset\img\ImagesProduct\GOATNight08.png" />
     <Content Include="Asset\img\Introduce\intro1.jpg" />
     <Content Include="Asset\img\Introduce\intro2.png" />
     <Content Include="Asset\img\Introduce\intro3.jpg" />
@@ -173,12 +199,18 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Generated\Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Models\Generated\PetaPoco.Generator.ttinclude" />
+    <Content Include="Models\Generated\PetaPoco.Core.ttinclude" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -210,7 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -238,6 +269,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

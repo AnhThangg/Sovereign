@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sovereign.Models.BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,13 +12,15 @@ namespace Sovereign.Controllers
         // GET: Sovereign
         public ActionResult Index()
         {
-            return View();
+            var db = SovereignBus.DanhSach();
+            return View(db);
         }
 
         // GET: Sovereign/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(String id)
         {
-            return View();
+            var db = SovereignBus.ChiTiet(id);
+            return View(db);
         }
 
         // GET: Sovereign/Create
