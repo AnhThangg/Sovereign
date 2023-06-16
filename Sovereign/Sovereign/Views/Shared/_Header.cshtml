@@ -1,0 +1,39 @@
+﻿<div id="header">
+    <a href="@Url.Action("Index","Home")" class="logo">
+        <img width="100px" src="~/Asset/img/Sovereign_Logo.jpg" alt="">
+    </a>
+    <div id="menu">
+        <div class="item">
+            @Html.ActionLink("Trang chủ", "Index", "Home")
+        </div>
+        @Html.Partial("_LoaiSanPham",Sovereign.Models.BUS.LoaiSanPhamBus.DanhSach())
+        <div class="item">
+            <a href="./Introduce.html">Giới thiệu</a>
+        </div>
+        <div class="item">
+            <a href="./Contact.html">Liên hệ</a>
+        </div>
+    </div>
+    <div id="actions">
+        <div class="item">
+            <div class="input-container">
+                <input required="" id="input" type="text">
+                <label class="label" for="input">Search...</label>
+                <div class="underline"></div>
+                <div class="sideline"></div>
+                <div class="upperline"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="item">
+            <a href="./Login.html">
+                <img src="~/Asset/img/assets/user.png" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a href="./Cart.html">
+                <img src="~/Asset/img/assets/cart.png" alt="">
+            </a>
+        </div>
+    </div>
+</div>

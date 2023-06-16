@@ -1,0 +1,13 @@
+﻿@model IEnumerable<SovereignConnection.Category>
+<div class="item dropdown">
+    @Html.ActionLink("Sản phẩm", "Index", "Sovereign")
+    <div class="submenu">
+        <div class="columnLeft">
+            @foreach (var item in Model)
+            {
+                <a href="@Url.Action("Index","LoaiSanPham",new {id=item.Category_Id})">@item.Category_Name</a><br>
+            }
+
+        </div>
+    </div>
+</div>

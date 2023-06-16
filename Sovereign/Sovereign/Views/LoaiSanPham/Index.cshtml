@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SovereignConnection.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SovereignHomePage.cshtml";
+}
+
+<div id="containerProduct">
+    <div class="headLine">
+        <h1>Sản phẩm của chúng tôi</h1>
+    </div>
+    <ul class="products">
+        @foreach (var item in Model)
+        {
+            int productId = int.TryParse(item.Product_Id, out int id) ? id : 0;
+            if (productId % 4 == 0)
+            {
+                <!-- sản phẩm -->
+                <li>
+                    <div class="product-item">
+                        <div class="product-top">
+                            <a href="@Url.Action("Details","Sovereign", new { id = item.Product_Id })" class="product-thumb">
+                                @{
+                                    string[] fileNames = item.Product_Image.Split(',');
+                                    string imagePath = "~/Asset/img/ImagesProduct/" + fileNames[0].Trim();
+                                }
+                                <img src="@Url.Content(imagePath)" alt="">
+                            </a>
+                            <a href="" class="buy-now">Buy now</a>
+                        </div>
+                        <div class="product-info">
+                            <a href="@Url.Action("Details","Sovereign", new { id = item.Product_Id})" class="product-name">@item.Product_Name</a>
+                            <div class="product-price">@item.Product_Price ₫</div>
+                        </div>
+                    </div>
+                </li>
+            }
+        }
+
+    </ul>
+</div>
+
+
+

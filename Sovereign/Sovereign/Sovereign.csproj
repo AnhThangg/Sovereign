@@ -123,11 +123,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoaiSanPhamController.cs" />
     <Compile Include="Controllers\SovereignController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BUS\LoaiSanPhamBus.cs" />
     <Compile Include="Models\BUS\SovereignBus.cs" />
     <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>
@@ -149,6 +152,36 @@
     <Content Include="Asset\img\HomePage\Slider3.png" />
     <Content Include="Asset\img\HomePage\Slider4.png" />
     <Content Include="Asset\img\HomePage\to_bottom.png" />
+    <Content Include="Asset\img\ImagesProduct\AirTech01.png" />
+    <Content Include="Asset\img\ImagesProduct\AirTech02.png" />
+    <Content Include="Asset\img\ImagesProduct\AirTech03.png" />
+    <Content Include="Asset\img\ImagesProduct\AirTech04.png" />
+    <Content Include="Asset\img\ImagesProduct\AirTech05.png" />
+    <Content Include="Asset\img\ImagesProduct\AirTech06.png" />
+    <Content Include="Asset\img\ImagesProduct\AirTech07.png" />
+    <Content Include="Asset\img\ImagesProduct\AirTech08.png" />
+    <Content Include="Asset\img\ImagesProduct\BasicShorts01.png" />
+    <Content Include="Asset\img\ImagesProduct\BasicShorts02.png" />
+    <Content Include="Asset\img\ImagesProduct\BasicShorts03.png" />
+    <Content Include="Asset\img\ImagesProduct\BasicShorts04.png" />
+    <Content Include="Asset\img\ImagesProduct\BasicShorts05.png" />
+    <Content Include="Asset\img\ImagesProduct\BasicShorts06.png" />
+    <Content Include="Asset\img\ImagesProduct\CargoB-mov01.png" />
+    <Content Include="Asset\img\ImagesProduct\CargoB-mov02.png" />
+    <Content Include="Asset\img\ImagesProduct\CargoB-mov03.png" />
+    <Content Include="Asset\img\ImagesProduct\CargoB-mov04.png" />
+    <Content Include="Asset\img\ImagesProduct\CargoB-mov05.png" />
+    <Content Include="Asset\img\ImagesProduct\CargoB-mov06.png" />
+    <Content Include="Asset\img\ImagesProduct\CargoB-mov07.png" />
+    <Content Include="Asset\img\ImagesProduct\CargoB-mov08.png" />
+    <Content Include="Asset\img\ImagesProduct\FlexPants01.png" />
+    <Content Include="Asset\img\ImagesProduct\FlexPants02.png" />
+    <Content Include="Asset\img\ImagesProduct\FlexPants03.png" />
+    <Content Include="Asset\img\ImagesProduct\FlexPants04.png" />
+    <Content Include="Asset\img\ImagesProduct\FlexPants05.png" />
+    <Content Include="Asset\img\ImagesProduct\FlexPants06.png" />
+    <Content Include="Asset\img\ImagesProduct\FlexPants07.png" />
+    <Content Include="Asset\img\ImagesProduct\FlexPants08.png" />
     <Content Include="Asset\img\ImagesProduct\GoatFather01.png" />
     <Content Include="Asset\img\ImagesProduct\GoatFather02.png" />
     <Content Include="Asset\img\ImagesProduct\GoatFather03.png" />
@@ -165,6 +198,22 @@
     <Content Include="Asset\img\ImagesProduct\GOATNight06.png" />
     <Content Include="Asset\img\ImagesProduct\GOATNight07.png" />
     <Content Include="Asset\img\ImagesProduct\GOATNight08.png" />
+    <Content Include="Asset\img\ImagesProduct\Monogram01.png" />
+    <Content Include="Asset\img\ImagesProduct\Monogram02.png" />
+    <Content Include="Asset\img\ImagesProduct\Monogram03.png" />
+    <Content Include="Asset\img\ImagesProduct\Monogram04.png" />
+    <Content Include="Asset\img\ImagesProduct\Monogram05.png" />
+    <Content Include="Asset\img\ImagesProduct\Monogram06.png" />
+    <Content Include="Asset\img\ImagesProduct\Monogram07.png" />
+    <Content Include="Asset\img\ImagesProduct\Monogram08.png" />
+    <Content Include="Asset\img\ImagesProduct\ShortWestside01.png" />
+    <Content Include="Asset\img\ImagesProduct\ShortWestside02.png" />
+    <Content Include="Asset\img\ImagesProduct\ShortWestside03.png" />
+    <Content Include="Asset\img\ImagesProduct\ShortWestside04.png" />
+    <Content Include="Asset\img\ImagesProduct\ShortWestside05.png" />
+    <Content Include="Asset\img\ImagesProduct\ShortWestside06.png" />
+    <Content Include="Asset\img\ImagesProduct\ShortWestside07.png" />
+    <Content Include="Asset\img\ImagesProduct\ShortWestside08.png" />
     <Content Include="Asset\img\Introduce\intro1.jpg" />
     <Content Include="Asset\img\Introduce\intro2.png" />
     <Content Include="Asset\img\Introduce\intro3.jpg" />
@@ -211,6 +260,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Models\Generated\PetaPoco.Generator.ttinclude" />
     <Content Include="Models\Generated\PetaPoco.Core.ttinclude" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_MainLayoutAdmin.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -239,9 +290,15 @@
     <Content Include="Views\Shared\_SovereignHomePage.cshtml" />
     <Content Include="Views\Sovereign\Index.cshtml" />
     <Content Include="Views\Sovereign\Details.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_LoaiSanPham.cshtml" />
+    <Content Include="Views\LoaiSanPham\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
