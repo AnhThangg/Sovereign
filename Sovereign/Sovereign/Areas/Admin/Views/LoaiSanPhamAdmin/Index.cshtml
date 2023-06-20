@@ -1,0 +1,84 @@
+﻿@model IEnumerable<SovereignConnection.Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+
+<!-- Quản lý loại sản phẩm -->
+<div class="main">
+
+    <div class="topbar">
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="Title">
+            <label>
+                <h1>Quản Lý Loại Sản Phẩm</h1>
+            </label>
+        </div>
+        <div class="user"></div>
+    </div>
+    <!-- card -->
+    <div class="cardBox">
+        <a href="@Url.Action("Create", "LoaiSanPhamAdmin")" class="card">
+            <div>
+                <div class="numbers">Add</div>
+                <div class="cardName">Thêm loại sản phẩm</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div>
+                <div class="numbers">Edit</div>
+                <div class="cardName">Sửa Loại Sản Phẩm</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="create-outline"></ion-icon>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div>
+                <div class="numbers">Delete</div>
+                <div class="cardName">Xóa Loại sản phẩm</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="trash-outline"></ion-icon>
+            </div>
+        </a>
+    </div>
+
+    <div class="details">
+        <!-- danh sách data -->
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Loại Sản Phẩm</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Tên Loại Sản Phẩm</td>
+                        <td>Mã Loại Sản Phẩm</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Category_Name</td>
+                            <td>@item.Category_Id</td>
+                            <td><a href="@Url.Action("Edit", "LoaiSanPhamAdmin", new {id=item.Category_Id})"><ion-icon name="create"></ion-icon></a></td>
+                            <td><a href="@Url.Action("Delete", "LoaiSanPhamAdmin", new {id=item.Category_Id})"><ion-icon name="trash"></ion-icon></a></td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

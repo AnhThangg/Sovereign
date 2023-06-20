@@ -124,6 +124,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoaiSanPhamAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MainAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SanPhamAdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoaiSanPhamController.cs" />
     <Compile Include="Controllers\SovereignController.cs" />
@@ -141,6 +144,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\AssetAdmin\css\responsive.css" />
+    <Content Include="Areas\Admin\AssetAdmin\css\style.css" />
+    <Content Include="Areas\Admin\AssetAdmin\img\img1.jpg" />
+    <Content Include="Areas\Admin\AssetAdmin\img\img2.jpg" />
+    <Content Include="Areas\Admin\AssetAdmin\img\img3.jpg" />
+    <Content Include="Areas\Admin\AssetAdmin\img\img4.jpg" />
+    <Content Include="Areas\Admin\AssetAdmin\img\img5.jpg" />
+    <Content Include="Areas\Admin\AssetAdmin\img\img6.jpg" />
+    <Content Include="Areas\Admin\AssetAdmin\img\img7.jpg" />
+    <Content Include="Areas\Admin\AssetAdmin\img\Shortcut_Logo.jpg" />
+    <Content Include="Areas\Admin\AssetAdmin\img\Sovereign_Logo.jpg" />
+    <Content Include="Areas\Admin\AssetAdmin\img\Sovereign_LogoAdmin.jpg" />
     <Content Include="Asset\css\style.css" />
     <Content Include="Asset\img\assets\cart.png" />
     <Content Include="Asset\img\assets\user.png" />
@@ -262,6 +277,15 @@
     <Content Include="Models\Generated\PetaPoco.Core.ttinclude" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_MainLayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\MainAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPhamAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiSanPhamAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiSanPhamAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiSanPhamAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPhamAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPhamAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiSanPhamAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPhamAdmin\Delete.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -294,10 +318,10 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_LoaiSanPham.cshtml" />
     <Content Include="Views\LoaiSanPham\Index.cshtml" />
+    <Content Include="Views\Sovereign\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Data\" />
   </ItemGroup>
   <ItemGroup>

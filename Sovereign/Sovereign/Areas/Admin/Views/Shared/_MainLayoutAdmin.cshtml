@@ -5,13 +5,99 @@
 
 <!DOCTYPE html>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>_MainLayoutAdmin</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Areas/Admin/AssetAdmin/css/style.css">
+    <title>Admin - Sovereign</title>
+    <link rel="stylesheet" href="~/Areas/Admin/AssetAdmin/css/responsive.css">
+    <link rel="shortcut icon" href="~/Areas/Admin/AssetAdmin/img/Shortcut_Logo.jpg">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <div> 
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="@Url.Action("Index","MainAdmin")">
+                        <img src="~/Areas/Admin/AssetAdmin/img/Sovereign_LogoAdmin.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","MainAdmin")">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","LoaiSanPhamAdmin")">
+                        <span class="icon"><ion-icon name="bag-handle"></ion-icon></span>
+                        <span class="title">Quản lý loại sản phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","SanPhamAdmin")">
+                        <span class="icon"><ion-icon name="shirt"></ion-icon></span>
+                        <span class="title">Sản phẩm</span>
+                    </a>
+                </li>
+
+
+
+
+
+                @*<li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out"></ion-icon></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>*@
+            </ul>
+        </div>
+        <!-- main -->
+        @RenderBody()
     </div>
+    <script>
+        //menu toggle
+        let toggle=document.querySelector('.toggle');
+        let navigation=document.querySelector('.navigation');
+        let main=document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+        //thêm hiệu ứng di chuột vào mục danh sách đã chọn
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+                this.classList.add('hovered');
+        }
+        list.forEach((item)=>item.addEventListener('mouseover',activeLink));
+
+    </script>
 </body>
 </html>

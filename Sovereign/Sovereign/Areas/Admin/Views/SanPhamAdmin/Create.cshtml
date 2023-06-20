@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<style>
+    .form {
+        margin-left: 10%;
+        margin-top: 0px;
+        background-color: #f5f5f5;
+        display: block;
+        padding: 1rem;
+        max-width: 80%;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-title {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+        text-align: center;
+        color: #000;
+    }
+
+    .input-container {
+        position: relative;
+    }
+
+        .input-container input, .form button {
+            outline: none;
+            border: 1px solid #e5e7eb;
+            margin: 8px 0;
+        }
+
+        .input-container input {
+            background-color: #fff;
+            padding: 1rem;
+            padding-right: 3rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            width: 100%;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+    .submit {
+        margin-top: 10px;
+        display: block;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        color: #ffffff;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+        width: 100%;
+        border-radius: 0.5rem;
+        text-transform: uppercase;
+        background-color: var(--red);
+        letter-spacing: 2px;
+        cursor: pointer;
+        border: none;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        transition: .4s;
+    }
+
+        .submit span:last-child {
+            display: none;
+        }
+
+        .submit:hover {
+            transition: .4s;
+            border: 2px dashed var(--red);
+            background-color: #fff;
+            color: var(--red);
+        }
+
+        .submit:active {
+            background-color: #87dbd0;
+        }
+</style>
+
+
+
+<div class="main">
+
+    <div class="topbar">
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="Title">
+            <label>
+                <h1>Thêm Sản Phẩm</h1>
+            </label>
+        </div>
+        <div class="user"></div>
+    </div>
+
+    @using (Html.BeginForm("Create", "SanPhamAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="form">
+            <p class="form-title">Nhập Sản Phẩm</p>
+            <div class="input-container">
+                <input type="text" name="Product_Id" placeholder="Id sản phẩm" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Product_Num" placeholder="Mã Sản Phẩm" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Product_Image" placeholder="Hình Ảnh" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Product_Name" placeholder="Tên Sản Phẩm" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Product_Price" placeholder="Giá Sản Phẩm" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Size" placeholder="Size" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Color" placeholder="Màu Sắc" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Amount" placeholder="Số lượng" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Product_Decription" placeholder="Mô tả sản phẩm" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Create_at" placeholder="Ngày Thêm" required>
+            </div>
+            <div class="input-container">
+                <input type="text" name="Category_Id" placeholder="Mã Loại Sản Phẩm" required>
+            </div>
+            <input type="submit" class="submit" value="Thêm Sản Phẩm">
+        </div>
+    }
+
+
+</div>
+
+
+
+
+
+<!-- Quản lý loại sản phẩm -->

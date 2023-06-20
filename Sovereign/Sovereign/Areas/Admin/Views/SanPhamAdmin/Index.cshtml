@@ -1,0 +1,134 @@
+﻿@model IEnumerable<SovereignConnection.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+
+<style>
+
+    .details table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+        .details table thead th {
+            font-weight: 600;
+            text-align: center;
+            grid-column: span 6; /* Đặt số lượng cột cho phần thead */
+        }
+
+    .details .recentOrders table tr {
+        color: var(--black);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+        .details .recentOrders table tr:last-child {
+            border-bottom: none;
+        }
+
+    .details .recentOrders table tbody tr:hover {
+        background: var(--red);
+        color: var(--white);
+    }
+
+    .details .recentOrders table tr td {
+        padding: 10px;
+        text-align: center;
+    }
+
+        .details .recentOrders table tr td ion-icon {
+            font-size: 30px;
+        }
+
+        .details .recentOrders table tr td:last-child {
+            text-align: center;
+        }
+
+        .details .recentOrders table tr td:nth-child(2) {
+            text-align: center;
+        }
+
+        .details .recentOrders table tr td:nth-child(3) {
+            text-align: center;
+        }
+</style>
+
+<div class="main">
+
+    <div class="topbar">
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="Title">
+            <label>
+                <h1>Quản Lý Loại Sản Phẩm</h1>
+            </label>
+        </div>
+        <div class="user"></div>
+    </div>
+    <!-- card -->
+    <div class="cardBox">
+        <a href="@Url.Action("Create", "SanPhamAdmin")" class="card">
+            <div>
+                <div class="numbers">Add</div>
+                <div class="cardName">Thêm loại sản phẩm</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div>
+                <div class="numbers">Edit</div>
+                <div class="cardName">Sửa Loại Sản Phẩm</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="create-outline"></ion-icon>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div>
+                <div class="numbers">Delete</div>
+                <div class="cardName">Xóa Loại sản phẩm</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="trash-outline"></ion-icon>
+            </div>
+        </a>
+    </div>
+
+    <div class="details">
+        <!-- danh sách data -->
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Sản Phẩm</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                            <tr>
+                                <td>@item.Product_Num</td>
+                                <td>@item.Product_Name</td>
+                                <td>@item.Amount</td>
+                                <td>@(Convert.ToDecimal(item.Product_Price).ToString("N0"))</td>
+                                <td><a href="@Url.Action("Edit", "SanPhamAdmin", new {id=item.Product_Id})"><ion-icon name="create"></ion-icon></a></td>
+                                <td><a href="@Url.Action("Delete", "SanPhamAdmin", new {id=item.Product_Id})"><ion-icon name="trash"></ion-icon></a></td>
+                            </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

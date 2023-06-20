@@ -1,0 +1,195 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<div class="main">
+    <!-- topbar -->
+    <div class="topbar">
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <!-- Tìm kiếm -->
+        <div class="search">
+            <label>
+                <input type="text" placeholder="Search...">
+                <ion-icon name="search-outline"></ion-icon>
+            </label>
+        </div>
+        <!-- hình ảnh user -->
+        <div class="user">
+            <img src="~/Areas/Admin/AssetAdmin/img/img1.jpg">
+        </div>
+    </div>
+    <!-- card -->
+    <div class="cardBox">
+        <div class="card">
+            <div>
+                <div class="numbers">1,504</div>
+                <div class="cardName">Daily View</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="eye-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">80</div>
+                <div class="cardName">Sales</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">284</div>
+                <div class="cardName">Comments</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="chatbox-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">$7,842</div>
+                <div class="cardName">Earning</div>
+            </div>
+            <div class="iconBox">
+                <ion-icon name="cash-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="details">
+        <!-- danh sách data -->
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Recent order</h2>
+                <a href="#" class="btn">View All</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Payment</td>
+                        <td>Status</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Star Refrigerator</td>
+                        <td>$1200</td>
+                        <td>Paid</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                    </tr>
+                    <tr>
+                        <td>Window Coolers</td>
+                        <td>$110</td>
+                        <td>Due</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Speakers</td>
+                        <td>$620</td>
+                        <td>Paid</td>
+                        <td><span class="status return">Return</span></td>
+                    </tr>
+                    <tr>
+                        <td>MSI laptop</td>
+                        <td>$110</td>
+                        <td>Due</td>
+                        <td><span class="status inprogress">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>Apple watch</td>
+                        <td>$1200</td>
+                        <td>Paid</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                    </tr>
+                    <tr>
+                        <td>Wall Fan</td>
+                        <td>$110</td>
+                        <td>Paid</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Adidas Shoes</td>
+                        <td>$620</td>
+                        <td>Paid</td>
+                        <td><span class="status return">Return</span></td>
+                    </tr>
+                    <tr>
+                        <td>Denim Shirts</td>
+                        <td>$110</td>
+                        <td>Due</td>
+                        <td><span class="status inprogress">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>Casual Shoes</td>
+                        <td>$575</td>
+                        <td>Paid</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Wall Fan</td>
+                        <td>$110</td>
+                        <td>Paid</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Denim Shirts</td>
+                        <td>$110</td>
+                        <td>Due</td>
+                        <td><span class="status inprogress">In Progress</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- New Customer -->
+        <div class="recentCustomers">
+            <div class="cardHeader">
+                <h2>Recent Customers</h2>
+            </div>
+            <table>
+                <tr>
+                    <td width="60px"><div class="imgBox"><img src="../img/img2.jpg"></div></td>
+                    <td><h4>Thang1<br><span>Quảng Ngãi</span></h4></td>
+                </tr>
+                <tr>
+                    <td width="60px"><div class="imgBox"><img src="../img/img3.jpg"></div></td>
+                    <td><h4>Thang2<br><span>Đà Nẵng</span></h4></td>
+                </tr>
+                <tr>
+                    <td width="60px"><div class="imgBox"><img src="../img/img4.jpg"></div></td>
+                    <td><h4>Thang3<br><span>Sài Gòn</span></h4></td>
+                </tr>
+                <tr>
+                    <td width="60px"><div class="imgBox"><img src="../img/img5.jpg"></div></td>
+                    <td><h4>Thang4<br><span>Hà Nội</span></h4></td>
+                </tr>
+                <tr>
+                    <td width="60px"><div class="imgBox"><img src="../img/img1.jpg"></div></td>
+                    <td><h4>Thang5<br><span>Huế</span></h4></td>
+                </tr>
+                <tr>
+                    <td width="60px"><div class="imgBox"><img src="../img/img6.jpg"></div></td>
+                    <td><h4>Thang6<br><span>Hải Phòng</span></h4></td>
+                </tr>
+                <tr>
+                    <td width="60px"><div class="imgBox"><img src="../img/img7.jpg"></div></td>
+                    <td><h4>Thang7<br><span>Nghệ An</span></h4></td>
+                </tr>
+                <tr>
+                    <td width="60px"><div class="imgBox"><img src="../img/img1.jpg"></div></td>
+                    <td><h4>Thang8<br><span>Quảng Ngãi</span></h4></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
