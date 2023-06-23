@@ -18,7 +18,7 @@
             }
         }
     </div>
-    
+
 
 
     <!-- mô tả sản phẩm -->
@@ -58,13 +58,38 @@
             </div>
         </div>
         <div class="cart">
-            <button class="describe_product-pay">
-                Thêm vào giỏ hàng
-            </button>
-            <button class="describe_product-pay">
+            <button class="describe_product-pay" onclick="placeOrder(@Model.Product_Id)">
                 Đặt hàng
             </button>
+
+
         </div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function placeOrder(productId) {
+        $.ajax({
+            url: '@Url.Action("PlaceOrder", "Sovereigncontroller")',
+            type: 'POST',
+            data: { productId: productId },
+            success: function (response) {
+                // Hiển thị thông báo đặt hàng thành công
+                alert("Đặt hàng thành công!");
+
+                // Cập nhật số lượng sản phẩm trong cơ sở dữ liệu (tuỳ chọn)
+                // ...
+
+                // Chuyển hướng đến trang thành công hoặc hiển thị thông tin đặt hàng (tuỳ chọn)
+                // ...
+            },
+            error: function () {
+                // Xử lý lỗi
+                alert("Đã xảy ra lỗi khi đặt hàng.");
+            }
+        });
+    }
+</script>
+
+
 

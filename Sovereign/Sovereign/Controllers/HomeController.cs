@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SovereignConnection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -24,6 +25,23 @@ namespace Sovereign.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        //GET: Register
+        public ActionResult Register() {
+            return View();
+        }
+
+        //POST: Register
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(Customer cus)
+        {
+            if (!ModelState.IsValid)
+            {
+                
+            }
             return View();
         }
     }

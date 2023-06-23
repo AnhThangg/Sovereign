@@ -127,12 +127,16 @@
     <Compile Include="Areas\Admin\Controllers\LoaiSanPhamAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamAdminController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoaiSanPhamController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SovereignController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account\User.cs" />
+    <Compile Include="Models\BUS\LoginBus.cs" />
     <Compile Include="Models\BUS\LoaiSanPhamBus.cs" />
     <Compile Include="Models\BUS\SovereignBus.cs" />
     <Compile Include="Models\Generated\Database.cs">
@@ -319,10 +323,12 @@
     <Content Include="Views\Shared\_LoaiSanPham.cshtml" />
     <Content Include="Views\LoaiSanPham\Index.cshtml" />
     <Content Include="Views\Sovereign\Delete.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

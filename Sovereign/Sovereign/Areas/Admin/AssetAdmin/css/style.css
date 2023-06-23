@@ -256,8 +256,9 @@ body{
     padding: 10px;
 }
 
-.details .recentOrders table tr td ion-icon{
+.details .recentOrders table tr td a ion-icon {
     font-size: 30px;
+    color: var(--xam);
 }
 
 .details .recentOrders table tr td:last-child{

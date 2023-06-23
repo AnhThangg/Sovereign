@@ -20,7 +20,7 @@
     <div id="wrapper">
 
         @* Header: đổ dữ liệu theo kiểu Html.Partial sau đó chuyển về MvcHtmlString *@
-        @{ 
+        @{
             var headerPartial = Html.Partial("_Header");
             headerPartial = new MvcHtmlString(headerPartial.ToString());
         }
@@ -53,6 +53,7 @@
             }, 500);
         });
     </script>
+    @RenderSection("scripts", required: false)
 </body>
 
 </html>

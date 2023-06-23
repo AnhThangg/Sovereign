@@ -88,5 +88,23 @@ namespace Sovereign.Controllers
                 return View();
             }
         }
+
+        [HttpPost]
+        public ActionResult PlaceOrder(int productId)
+        {
+            try
+            {
+                // TODO: Cập nhật cơ sở dữ liệu hoặc thực hiện các tác vụ liên quan đến đặt hàng thành công
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, error = ex.Message });
+            }
+        }
+
+
+
     }
 }

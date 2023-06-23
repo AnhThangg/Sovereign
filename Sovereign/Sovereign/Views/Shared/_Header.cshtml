@@ -8,10 +8,10 @@
         </div>
         @Html.Partial("_LoaiSanPham",Sovereign.Models.BUS.LoaiSanPhamBus.DanhSach())
         <div class="item">
-            <a href="./Introduce.html">Giới thiệu</a>
+            @Html.ActionLink("Giới Thiệu","About","Home")
         </div>
         <div class="item">
-            <a href="./Contact.html">Liên hệ</a>
+            @Html.ActionLink("Liên Hệ", "Contact", "Home")
         </div>
     </div>
     <div id="actions">
